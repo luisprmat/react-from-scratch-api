@@ -57,6 +57,6 @@ class PuppyController extends Controller
         sleep(1);
         $puppy->likedBy()->toggle(1);
 
-        return PuppyResource::make($puppy);
+        return PuppyResource::collection(Puppy::all());
     }
 }
