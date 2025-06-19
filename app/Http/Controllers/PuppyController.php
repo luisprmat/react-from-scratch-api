@@ -15,6 +15,13 @@ class PuppyController extends Controller
     {
         sleep(1);
 
+        // return response()->json([
+        //     'error' => true,
+        //     'message' => 'Failed to retrieve puppies',
+        //     'details' => 'Database connection error occurred.',
+        //     'code' => 'DB_CONNECTION_ERROR',
+        // ], 500);
+
         return PuppyResource::collection(Puppy::all());
     }
 
